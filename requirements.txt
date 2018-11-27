@@ -1,0 +1,4 @@
+pip instal pandas
+pip install csv
+pip install re
+pip install datetime

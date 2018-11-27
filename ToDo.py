@@ -16,8 +16,9 @@ def user_input():
 
 def add(input_string):
     Status = '[]'
-    items = re.search(r"(.*?(?P<Project>\+\w+).*?)?(?P<DueDate>today|tomorrow|\d+.\d+.\d{2,}?).*?"
-                      r"(?P<Message>(.*?)(?P<Context>(@\w+)).*)",
+    items = re.search(r"(((.*(?P<Project>\+\w+).*)?)(?P<DueDate>today|tomorrow|\d+.\d+.\d{2,}).*)?)(?P<Message>.*(?P<Context
+                      (@\w+)).*)",
+                      #
                       input_string, re.I)
     # testing
     # print(items.group('project'))
