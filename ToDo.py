@@ -110,6 +110,7 @@ def overdue():
     df=df[df.Status != '[Done]']
     x = df.groupby("DueDate") # column name
     for date, group in x:
-        if datetime.datetime.strptime(date, "%Y-%m-%d").date() <= today:
-            print(group.to_string())
+        for datetime.datetime.strptime(date, "%Y-%m-%d").date() <= today:
+            print(datetime.datetime.strptime(date, "%Y-%m-%d").date())
+            print(group.to_string(index=False))
 
